@@ -1,0 +1,25 @@
+// 参考：https://element.eleme.cn/#/zh-CN/component/custom-theme
+/* 改变主题色变量 */
+$--color-primary: #545C64;
+$--color-success: #27B6AF;
+$--menu-background-color: #1D212A;
+$--menu-item-font-color: #B3B8C3;
+$--menu-item-hover-fill: #1F2D3D;
+$--main-padding: 15px;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+// 自定义变量
+$---menu--inline-background-color: #13161C;
+@import "node_modules/element-ui/packages/theme-chalk/src/index";
+.el-menu-item.is-active {
+  color: $--color-white;
+  background-color: $--menu-item-hover-fill;
+  font-weight: $--font-weight-primary;
+}
+
+.el-menu--inline {
+  background-color: $---menu--inline-background-color;
+}
+.el-submenu__title {
+  font-weight: $--font-weight-primary;
+}
