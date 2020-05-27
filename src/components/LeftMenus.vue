@@ -1,5 +1,5 @@
 <template>
-  <el-menu class="index-menu" :collapse="isCollapse" router>
+  <el-menu class="index-menu" :collapse="isCollapse" router :default-active="$route.path">
     <el-row>
       <el-col class="text-center padding-tb">
         <router-link class="index-title" to="/">{{ logoTitle }}</router-link>
