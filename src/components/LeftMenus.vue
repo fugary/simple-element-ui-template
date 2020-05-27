@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'LeftMe nus',
+  name: 'LeftMenus',
   props: {
     menuCollapse: {
       type: Boolean,

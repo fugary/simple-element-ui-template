@@ -23,3 +23,17 @@ $---menu--inline-background-color: #13161C;
 .el-submenu__title {
   font-weight: $--font-weight-primary;
 }
+
+.login-form {
+  width: 500px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 10vh auto;
+  .el-card__header {
+    background-color: $--menu-background-color;
+    color: $--menu-item-font-color;
+  }
+  .login-button {
+    width: 100%;
+  }
+}
