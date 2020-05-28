@@ -1,4 +1,5 @@
 import store from '@/store'
+import { $http } from './RequestModelApi'
 
 const $themeList = [
   {
@@ -21,5 +22,6 @@ export default {
       store.dispatch('Theme/changeTheme', theme)
     }
     Vue.prototype.$themeList = $themeList
+    Vue.prototype.$http = $http
   }
 }

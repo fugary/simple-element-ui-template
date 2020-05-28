@@ -5,8 +5,10 @@
 
 1. Vue + Vuex + Vue-Router
 2. ElementUI
+3. vuex-persistedstate
+4. axios
 
-目前并没有做太多集成，后续可能添加axios，localstorage存储等。
+目前并没有做太多集成，主要基本布局、Http请求、主题切换等。
 
 默认主题：
 
