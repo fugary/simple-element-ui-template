@@ -19,6 +19,6 @@ new Vue({
   store,
   render: h => h(App),
   mounted () {
-    this.$changeTheme()
+    this.$changeTheme(store.getters['Theme/currentTheme'] || undefined)
   }
 }).$mount('#app')

@@ -1,18 +1,18 @@
 export default {
   namespaced: true,
   state: {
-    dataConfig: {
+    persistData: {
       theme: null
     }
   },
   getters: {
     currentTheme: state => {
-      return state.dataConfig.theme
+      return state.persistData.theme
     }
   },
   mutations: {
     changeTheme (state, theme) {
-      state.dataConfig.theme = theme
+      state.persistData.theme = theme
     }
   },
   actions: {

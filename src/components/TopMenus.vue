@@ -32,7 +32,7 @@
         </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item :key="theme.id" v-for="theme in $themeList" @click.native="$changeTheme(theme)">
-                        <el-icon v-if="$store.getters['Theme/currentTheme'] === theme" name="check"/>
+                        <el-icon v-if="currentTheme && currentTheme.id === theme.id" name="check"/>
                         {{theme.name}}
                     </el-dropdown-item>
                 </el-dropdown-menu>
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'TopMenus',
   props: {
@@ -59,6 +61,9 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    ...mapGetters({ currentTheme: 'Theme/currentTheme' })
   },
   data () {
     const { menuCollapse } = this.$props
