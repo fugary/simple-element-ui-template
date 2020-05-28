@@ -18,10 +18,12 @@
         <i class="el-icon-user-solid"></i>
         <span slot="title">角色管理</span>
       </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-lock"></i>
-        <span slot="title">权限管理</span>
-      </el-menu-item>
+      <el-link href="baidu.com" :underline="false">
+        <el-menu-item index="4">
+          <i class="el-icon-lock"></i>
+          <span slot="title">权限管理</span>
+        </el-menu-item>
+      </el-link>
       <el-menu-item index="5">
         <i class="el-icon-menu"></i>
         <span slot="title">菜单管理</span>

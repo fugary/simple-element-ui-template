@@ -7,6 +7,7 @@
 2. ElementUI
 3. vuex-persistedstate
 4. axios
+5. moment
 
 目前并没有做太多集成，主要基本布局、Http请求、主题切换等。
 

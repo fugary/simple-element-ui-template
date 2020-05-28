@@ -8,28 +8,17 @@
                 ></el-icon>
             </el-link>
         </el-col>
-        <el-col
-                class="padding text-right"
+        <el-col class="padding text-right"
                 :xl="23"
                 :lg="23"
                 :md="23"
                 :sm="22"
-                :xs="22"
-        >
+                :xs="22">
             <el-dropdown class="margin-l">
-        <span class="el-dropdown-link">
-          语言<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-                <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item>中文</el-dropdown-item>
-                    <el-dropdown-item>English</el-dropdown-item>
-                </el-dropdown-menu>
-            </el-dropdown>
-            <el-dropdown class="margin-l">
-        <span class="el-dropdown-link">
-            <el-icon name="s-open"/>
-          主题<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
+                <span class="el-dropdown-link">
+                    <el-icon name="s-open"/>
+                  主题<i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item :key="theme.id" v-for="theme in $themeList" @click.native="$changeTheme(theme)">
                         <el-icon v-if="currentTheme && currentTheme.id === theme.id" name="check"/>
@@ -38,12 +27,14 @@
                 </el-dropdown-menu>
             </el-dropdown>
             <el-dropdown class="margin-l">
-        <span class="el-dropdown-link">
-          <el-icon name="s-custom"/>
-          管理员<i class="el-icon-arrow-down el-icon--right"/>
-        </span>
+                <span class="el-dropdown-link">
+                  <el-icon name="s-custom"/>
+                  管理员<i class="el-icon-arrow-down el-icon--right"/>
+                </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item>个人资料</el-dropdown-item>
+                    <el-dropdown-item v-external-link="'https://github.com/fugary/simple-element-ui-template'">GitHub
+                    </el-dropdown-item>
                     <el-dropdown-item @click.native="$router.push('/login')">退出</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>

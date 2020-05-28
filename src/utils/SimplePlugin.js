@@ -23,5 +23,12 @@ export default {
     }
     Vue.prototype.$themeList = $themeList
     Vue.prototype.$http = $http
+    Vue.directive('ExternalLink', (el, binding) => {
+      if (binding.value) {
+        el.onclick = () => {
+          window.location.href = binding.value
+        }
+      }
+    })
   }
 }

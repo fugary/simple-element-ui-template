@@ -7,9 +7,11 @@ import ElementUI from 'element-ui'
 // 样式配置
 import './assets/css/main.scss'
 import SimplePlugin from './utils/SimplePlugin'
+import CommonFilterPlugin from './utils/CommonFilterPlugin'
 // 配置ElementUI
 Vue.use(ElementUI)
 // 自定义插件
+Vue.use(CommonFilterPlugin)
 Vue.use(SimplePlugin)
 
 Vue.config.productionTip = false

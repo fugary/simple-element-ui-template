@@ -1,5 +1,6 @@
 // 自定义变量
 $---menu--inline-background-color: #13161C !default;
+$---menu--width: 220px !default;
 $---index-header-height: 50px !default;
 $---padding-common: 15px !default;
 $---margin-common: 15px !default;
@@ -9,6 +10,14 @@ $---border-line-color: #E6E6E6 !default;
   color: $--color-white;
   background-color: $--menu-item-hover-fill;
   font-weight: $--font-weight-primary;
+}
+
+.el-submenu .el-menu-item {
+  min-width: $---menu--width;
+}
+
+.el-link .el-menu-item [class*="el-icon-"] + span {
+  margin-left: 0;
 }
 
 .el-menu--inline {
@@ -51,7 +60,7 @@ $---border-line-color: #E6E6E6 !default;
 }
 
 .index-menu:not(.el-menu--collapse) {
-  width: 220px;
+  width: $---menu--width;
 }
 
 .top-menu {
@@ -70,6 +79,18 @@ $---border-line-color: #E6E6E6 !default;
 
 .el-dropdown-link {
   cursor: pointer;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.table-form .el-form-item:not(.is-error) {
+  margin-bottom: auto
+}
+
+.el-button+.el-button{
+  margin-left: 8px;
 }
 
 .text-center {
